@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="cabecera" class="minimized">
+        <button id="minimizeChatButton" onclick="minimizeChat()" style="display: none;"><i class="fas fa-angle-down"></i></button>
+    </div> <!-- Añadimos la clase 'minimized' a cabecera -->
+    <div id="openChatContainer" style="display: inline-flex;">
+        <button id="openChatButton" onclick="openChat()"></button>
+        <div id="assistantText" style="margin-left: 10px;">Iniciar Asistente Virtual</div>
+        <div id="notificationBubble">1</div>
+    </div>    
+    <div id="chatbox" class="minimized"></div> <!-- Añadimos la clase 'minimized' a chatbox -->
+    <div class="input-container minimized"> <!-- Añadimos la clase 'minimized' a input-container -->
+        <input id="userInput" class="input-field" type="text" placeholder="Escribe un mensaje..." />
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
